@@ -1,43 +1,54 @@
-#+TITLE: README.org
+#+TITLE: Shell
 #+AUTHOR: Laluxx
 #+DATE: [2024-11-06]
 #+OPTIONS: toc:2
 
-* Shell
-a shell for your shell
-** Install
+A shell for your shell
+
+* Install
 #+begin_src sh
 git clone https://github.com/laluxx/shell
 cd shell
-gcc main.c -o shell && ./shell
+sudo make install && ./shell
 #+end_src>
-** Features
+* Features
 This shell is relatively new, i started developing it at 2024-11-06.
 But it already has some nice features to it.
-*** Electric_pair_mode
+** Electric_pair_mode
 Automatically insert matching closing delimiter for '(', '{', '[', '"', "'"
 and try to be smart about it.
-*** Xclip integration
+** Xclip integration
 When yanking with C-y it uses the system clipboard
-using xclip, so you don't have to use C-V anymore
+using xclip, so you don't have to use C-V anymore.
+
+Also killing with C-k or C-w copied so the system clipboard (not true TODO)
 
 * TODO's
 - [ ] Preprocess bash [0/2]
   - [ ] Alias
   - [ ] Functions
-    
-- [ ] Syntax highlighting [0/6]
-  - [ ] For aliases
+   
+- [-] Syntax highlighting [1/9]
+  - [X] Binaries
+  - [ ] Builtins
+  - [ ] Bash keywords (in bold)
+  - [ ] arguments
+  - [ ] aliases
   - [ ] Functions
-  - [ ] Binaries
   - [ ] Numbers
-  - [ ] Control characters
+  - [ ] Control characters #00FFFF
   - [ ] strings and \n
   - [ ] Shell builtins like "&&"", "||"
 
+- [ ] Completion [0/2]
+  - [ ] Binaries
+  - [ ] arguments
+
+- [ ] Quoted insert with C-q
+- [ ] Crystal point
 - [ ] Render the region
 - [ ] Make the history persistent
-- [ ] Completion
+- [ ] Compilation mode jumpt to previous_error() next_error()
 - [ ] render Red background on errors and Yellow for warnings idk
 - [ ] C-/ is not a valid character (find a way anyways we need that emacs style undo)
 
